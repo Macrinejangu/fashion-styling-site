@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta & Title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | The Style Sankofa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Header-->
+    <header>
+        <div class="logo">
+            <h1>The Style Sankofa</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lookbook.html">Lookbook</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Page Banner-->
+    <section class="page-banner">
+        <h2>Get In Touch</h2>
+        <p>We'd love to hear from you — for bookings, collaborations, or just a vibe check.</p>
+    </section>
+
+    <!--Contact form -->
+    <section class="contact-form">
+        <form action="https://formspree.io/f/xbloodoj" method="POST">
+            <!--Name Field-->
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <!--Email Field-->
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <!--Message Field-->
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us what you're looking for..."></textarea>
+
+            <!--Submit Button-->
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!--Google Calendar Booking Button-->
+<section class="contact-booking">
+    <h3>Prefer to book directly?</h3>
+    <div>
+        <script>
+            (function() {
+                var target = document.currentScript;
+                window.addEventListener('load', function() {
+                    calendar.schedulingButton.load({
+                        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ04RwBEazv5gNnlx1yPYGaMQVPVKZK5hIObGzEh7Q4GB-uRXR9riahiREdhlY1JKtzHerAdeFrR?gv=true',
+                        color: '#8b0000',
+                        label: 'Book a Consultation',
+                        target,
+                    });
+                });
+            })();
+        </script>
+    </div>
+</section>
+
+    <!--Social Links-->
+    <section class="contact-info">
+        <p>Or connect with us on:</p>
+        <ul class="social-links">
+            <li><a href="#" target="_blank">Instagram</a></li>
+            <li><a href="#" target="_blank">Pinterest</a></li>
+            <li><a href="mailto:info@stylesankofa.com">Email Us</a></li>
+        </ul>
+    </section>
+
+    <!-- Google Calendar Appointment Scheduling -->
+<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+
+    <!--Footer-->
+    <footer>
+        <p>&copy; 2025 The Style Sankofa. All rights reserved.</p>
+    </footer>
+</body>
+</html>

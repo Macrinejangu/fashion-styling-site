@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta & Title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Quiz | The Style Sankofa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Header-->
+    <header>
+        <div class="logo">
+            <h1>The Style Sankofa</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lookbook.html">Lookbook</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="quiz.html" class="active">Style Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Quiz Intro-->
+    <section class="page-banner">
+        <h2>Discover Your Style Identity</h2>
+        <p>This 2-minute quiz will help us determine your core fashion persona. Let’s play!</p>
+    </section>
+
+    <!--Quiz Form-->
+    <section class="quiz-form">
+        <form id="styleQuiz">
+            <!-- Question 1 -->
+            <div class="quiz-question">
+                <p><strong>1. What’s your go-to weekend outfit?</strong></p>
+                <label><input type="radio" name="q1" value="heritage"> Maxi dress and sandals</label><br>
+                <label><input type="radio" name="q1" value="urban"> Jeans, crop top, and sneakers</label><br>
+                <label><input type="radio" name="q1" value="classic"> Tailored pants and a silk blouse</label><br>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="quiz-question">
+                <p><strong>2. What colors do you gravitate toward?</strong></p>
+                <label><input type="radio" name="q2" value="heritage"> Earth tones & neutrals</label><br>
+                <label><input type="radio" name="q2" value="urban"> Brights & prints</label><br>
+                <label><input type="radio" name="q2" value="classic"> Monochrome classics</label><br>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="quiz-question">
+                <p><strong>3. What inspires your fashion most?</strong></p>
+                <label><input type="radio" name="q3" value="heritage"> African heritage & tradition</label><br>
+                <label><input type="radio" name="q3" value="urban"> Music, street style & pop culture</label><br>
+                <label><input type="radio" name="q3" value="classic"> Art, minimalism & fashion icons</label><br>
+            </div>
+
+           <!-- Submit Button -->
+<button id="submit-quiz">Reveal My Style</button>
+</form>
+
+<!-- Overlay Result Section (created by JS) -->
+<div id="quizResult" style="display: none;"></div>
+    </section>
+
+    <!--Footer-->
+    <footer>
+        <p>&copy; 2025 The Style Sankofa. All rights reserved.</p>
+    </footer>
+
+    <!-- Optional JS -->
+    <script src="script.js"></script>
+</body>
+</html>
