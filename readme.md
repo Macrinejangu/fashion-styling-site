@@ -4,17 +4,42 @@
 
 ## About the Project
 
-**The Style Sankofa** is a fictional fashion and personal styling brand I created for my final project at Moringa School. The name “Sankofa” comes from a Ghanaian word that means “go back and fetch it” — a reminder to return to our roots and use the wisdom of the past to guide our future. This site combines culture, creativity, and code to celebrate bold fashion inspired by African identity.
+The Style Sankofa is a purposeful fashion and personal styling brand created as my final project for Moringa School’s foundational software development program. “Sankofa” is derived from a powerful Akan proverb meaning “go back and fetch it” — a call to embrace cultural roots while forging bold, future-forward expressions.
 
-This project helped me learn the core building blocks of web development — HTML, CSS, and JavaScript — while also practicing real-world design and user experience techniques.
+This project blends code and culture, demonstrating how HTML, CSS, and JavaScript can be used to build a modern, interactive web experience rooted in African heritage, creativity, and self-expression. From styling services and visual galleries to interactive quizzes and booking integrations, every page is a piece of storytelling brought to life through clean code and design.
 
-## Project Goals
+It reflects not only my technical growth, but also my belief that fashion can be a form of cultural reclamation and digital storytelling.
 
-- Build a responsive and beautiful website from scratch using HTML, CSS, and JavaScript.
-- Practice using forms, JavaScript logic, and styling techniques.
-- Learn to debug, iterate, and host a real website on GitHub Pages.
-- Add interactive features like a style quiz, Google Calendar integration, and confetti animations.
-- Develop a full portfolio-ready website with personality and purpose.
+## Project Purpose & Goals
+
+This web application was designed with the following objectives in mind:
+ - Build from scratch using semantic HTML, responsive CSS, and interactive JavaScript to demonstrate full control of front-end fundamentals.
+- Ensure responsiveness across mobile, tablet, and desktop devices using Flexbox and media queries.
+-  Include interactive features such as a style personality quiz (with confetti celebration and dynamic result), clickable CTAs, and a calendar booking widget.
+ - Implement form functionality to allow visitors to contact the brand or book a consultation.
+-  Use real-world techniques like DOM manipulation, event handling, and basic validation to enhance user experience.
+-  Use Git and GitHub effectively for version control, collaboration, and public deployment via GitHub Pages.
+-  Document the journey with in-code comments, a structured README, and clear naming conventions for easier collaboration or future iteration.
+-  Apply cultural storytelling to design — not just for aesthetics, but to deliver a meaningful brand experience.
+
+This project solves the problem of how to build an engaging, functional fashion brand website from scratch, with no templates or external frameworks — just code, creativity, and continuous learning.
+
+## Known Issues
+
+Despite the effort to polish every detail of this project, a few issues remain or were experienced during development:
+1. Image Loading on GitHub Pages
+Some images did not display on GitHub Pages due to case sensitivity in file paths (e.g., Images/Image 3.jpeg vs images/image 3.jpeg). This has since been corrected by ensuring all folder and file names are consistently capitalized.
+2. Mobile Layout Variations
+The homepage hero image and layout had responsiveness inconsistencies on smaller screens. These were resolved using media queries, but certain extreme screen sizes might still require fine-tuning.
+3. Style Quiz Result Visibility
+There was an intermittent issue where quiz results were not displaying full screen or were showing below the fold. This was due to HTML structure mismatches or JS script loading order, which has been corrected. However, further testing may be needed for cross-browser consistency.
+4. Form Submissions (Email Delivery)
+The contact form is integrated with Formspree for email handling. While it works during testing, free Formspree plans may limit submission counts or occasionally delay email delivery.
+5.localStorage Feature (Not Yet Implemented)
+While the site handles dynamic DOM interactions, the bonus objective of storing form or quiz data in localStorage has not yet been fully integrated, I am however receiving the filled forms in my email.
+6. Calendar Button Load Delay
+On slower networks, the Google Calendar “Book a Consultation” button may take a moment to load or may fail if the script is blocked. An alternative fallback solution could be implemented in the future.
+
 
 ## Pages Included
 
