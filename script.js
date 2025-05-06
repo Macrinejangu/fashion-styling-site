@@ -1,78 +1,51 @@
-// script.js
+/ script.js
 
-window.addEventListener("load", function(){
+document.addEventListener("DOMContentLoaded", function () {
+    const submitButton = document.getElementById("submit-quiz");
+  
+    if (submitButton) {
+      submitButton.addEventListener("click", function (e) {
+        e.preventDefault();
+  
+        const answers = document.querySelectorAll("input[type='radio']:checked");
+        if (answers.length < 3) {
+          alert("Please answer all questions before submitting.");
+          return;
+        }
+  
+        const styleScore = {
+          heritage: 0,
+          urban: 0,
+          classic: 0
+        };
+  
+        answers.forEach(answer => {
+          if (answer.value === "heritage") styleScore.heritage += 1;
+          if (answer.value === "urban") styleScore.urban += 1;
+          if (answer.value === "classic") styleScore.classic += 1;
+        });
+  
+        const maxScore = Math.max(styleScore.heritage, styleScore.urban, styleScore.classic);
+        let resultText = "";
+  
+        if (styleScore.heritage === maxScore) {
+          resultText = "🌿 You're Heritage Chic – rooted in culture, bold prints, and timeless elegance.";
+        } else if (styleScore.urban === maxScore) {
+          resultText = "🔥 You're a Street Style Star – edgy, expressive, and always on trend.";
+        } else {
+          resultText = "✨ You're Modern Classic – clean lines, luxury details, and effortless grace.";
+        }
+  
+        // Create overlay
+const overlay = document.createElement("div");
+overlay.className = "quiz-overlay";
+overlay.innerHTML = `
+  <div class="quiz-result">
+    <h1>${resultText}</h1>
+    <button class="cta-button" onclick="window.location.href='contact.html'">Get Your Personalised Style Now!</button>
+  </div>
+`;
+document.body.appendChild(overlay);
+  });
 
-    var btn_submit = document.getElementById("submit-quiz")
 
-    if(btn_submit){
-        btn_submit.addEventListener("click", function(e){
-            e.preventDefault()
-
-            var q1 = document.querySelector("input[name='q1']:checked")
-            var q2 = document.querySelector("input[name='q2']:checked")
-            var q3 = document.querySelector("input[name='q3']:checked")
-
-            if(!q1 || !q2 || !q3){
-                alert("You forgot to answer something!")
-                return
-            }
-
-            var heritage = 0
-            var urban = 0
-            var classic = 0
-
-            // counting manually
-            if(q1.value == "heritage"){
-                heritage = heritage + 1
-            } else {
-                if(q1.value == "urban"){
-                    urban += 1
-                } else {
-                    classic = classic + 1
-                }
-            }
-
-            if(q2.value == "heritage"){
-                heritage += 1
-            } else {
-                if(q2.value == "urban"){
-                    urban = urban + 1
-                } else {
-                    classic++
-                }
-            }
-
-            if(q3.value == "heritage"){
-                heritage++
-            } else {
-                if(q3.value == "urban"){
-                    urban++
-                } else {
-                    classic = classic + 1
-                }
-            }
-
-            // show result
-            var finalResult = ""
-
-            if(heritage > urban && heritage > classic){
-                finalResult = "You are Heritage Chic!"
-            }
-            else {
-                if(urban > classic){
-                    finalResult = "You are a Street Style Star!"
-                } else {
-                    finalResult = "You are Modern Classic!"
-                }
-            }
-
-            var quiz_result = document.getElementById("quizResult")
-            quiz_result.innerText = finalResult
-            quiz_result.style.display = "block"
-            quiz_result.style.backgroundColor = "#fff0f0"
-            quiz_result.style.padding = "20px"
-            quiz_result.style.marginTop = "20px"
-        })
-    }
-
-})
