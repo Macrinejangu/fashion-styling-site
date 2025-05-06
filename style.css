@@ -409,7 +409,7 @@ html, body {
   }
 }
   
-  .quiz-overlay {
+.quiz-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -431,6 +431,22 @@ html, body {
     color: #8b0000;
     margin-bottom: 1.5rem;
   }
+  
+  .cta-button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #a30000;
+  }
+  
   /*Buttons*/
   .cta-button {
     padding: 1rem 2rem;
